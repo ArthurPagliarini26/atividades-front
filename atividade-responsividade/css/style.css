@@ -3,6 +3,9 @@
     --white: white;
     --grey: #454652;
     --backgroud-grey: #f3f3f3;
+    --light-grey: #f9f9f9;
+    --borders: #c6c5d4;
+    --selected: #2b5bb5;
 }
 
 * {
@@ -27,6 +30,19 @@ h1 {
     color: var(--blue);
 }
 
+.tittle {
+    color: var(--blue);
+}
+
+.selected {
+    color: var(--selected);
+    border-bottom: var(--selected) solid 2px;
+}
+
+.normal-text {
+    color: var(--grey);
+}
+
 html, body {
     overflow-x: hidden;
     width: 100%;
@@ -36,19 +52,22 @@ html, body {
 
 header {
     width: 100%;
-    max-width: 100vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
     padding: 10px;
-    border-bottom: rgba(0, 0, 0, 0.466) solid 1px;
+    border-bottom: var(--borders) solid 1px;
 }
 
 
 header img{
-    width: 20px;
+    width: auto;
     margin-left: 15px;
+}
+
+.header-categories {
+    display: none;
 }
 
 header button{
@@ -73,16 +92,18 @@ h2 {
 .up-content {
     display: flex;
     flex-direction: column;
-    margin: 80px 20px;
     justify-content: center;
     align-items: center;
     text-align: center;
     gap: 20px;
+    padding: 80px 20px 80px 20px;
 }
 
 .up-content-buttons {
     display: flex;
     gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .up-content-buttons .up-button1 {
@@ -106,24 +127,436 @@ h2 {
 .about-us {
     display: flex;
     flex-direction: column;
-    margin-top: 80px;
     text-align: left;
     gap: 20px;
     background-color: var(--backgroud-grey);
-    padding: 40px 10px 40px 10px;
+    padding: 80px 20px 80px 20px;
 }
 
 .about-us img {
-    margin: 0 10px 0 10px;
     width: auto;
     max-width: 100%;
     border-radius: 10px;
 }
 
-.about-us p {
-    margin-left: 10px;
+
+.start-our-services {
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-.about-us h2 {
-    margin-left: 10px;
+.our-services {
+    background-color: var(--light-grey);
+    padding: 80px 20px 80px 20px;
+}
+
+.blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.our-services img {
+    width: 30px;
+}
+
+.block1,
+.block2,
+.block3,
+.block4 {
+    width: 100%;
+    background-color: var(--white);
+    border-radius: 10px;
+    border: var(--borders) solid 0.1rem;
+    padding: 15px 5px 15px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-us {
+    background-color: var(--backgroud-grey);
+    padding: 80px 20px 80px 20px;
+}
+
+.contact-us-content {
+    background-color: var(--white);
+    padding: 50px;
+    border: var(--borders) solid 1px;
+    border-radius: 10px;
+}
+
+.start-contact-us {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-contact-us {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: var(--grey);
+}
+
+.form-contact-us label {
+    margin-bottom: -10px;
+}
+
+.form-contact-us input {
+    border: var(--borders) solid 1px;
+    border-radius: 5px;
+    margin: 0 10px 0 10px;
+    width: 100%;
+    height: 50px;
+    margin: 0;
+}
+
+.form-contact-us input.mensagem {
+    height: 100px;
+}
+
+.contact-us button {
+    background-color: var(--blue);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 50px;
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+.button-area {
+    display: flex;
+    justify-content: center;
+}
+   
+footer {
+    border-top: var(--borders) solid 1px;
+    padding: 35px 20px 35px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.terms-footer {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.terms-footer p{
+    font-size: 14px;
+    word-spacing: 1px;
+}
+
+.our-services img {
+    width: 40px;
+}
+
+.imagem2 {
+    display: none;
+    width: auto;
+    border-radius: 10px;
+}
+
+.info {
+    display: none;
+}
+
+hr {
+    display: none;
+}
+
+@media (min-width: 0px){
+    header img { max-width: 30px;}
+}
+
+@media (min-width: 400px){
+    header img { max-width: 30px;}
+}
+
+@media (min-width: 800px) {
+    p { font-size: 16px; }
+    h3 { font-size: 20px; }
+    h2 { font-size: 25px; }
+    h1 { font-size: 31px; }
+    button { font-size: 16px; padding: 10px 20px; }
+    header img { max-width: 35px; }
+    .up-content-buttons { gap: 15px; }
+
+    .our-services img {
+        width: 40px;
+    }
+}
+
+@media (min-width: 1280px) {
+
+    .up-content {
+        background-color: var(--light-grey);
+        border-bottom: var(--borders) solid 1px;
+    }
+
+    .our-services {
+        background-color: var(--light-grey);
+        border-bottom: var(--borders) solid 1px;
+    }
+
+    .about-us {
+        background-color: var(--light-grey);
+        border-bottom: var(--borders) solid 1px;
+    }
+
+    .contact-us {
+        background-color: var(--light-grey);
+    }
+
+    p { font-size: 18px; }
+    h3 { font-size: 25px; }
+    h2 { font-size: 34px; }
+    h1 { font-size: 48px; }
+
+    .header-categories { 
+        display: flex; 
+        list-style: none;
+        gap: 32px;
+        color: var(--grey);
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    header { padding-left: 30px; }
+    header img { display: none; }
+
+    .up-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        padding: 80px 48px;
+    }
+
+    .up-content-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        flex: 1;
+    }
+
+    .up-content-image {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .imagem2 {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 12px;
+    }
+
+    .about-us {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        gap: 50px;
+        padding: 80px 48px 80px 48px;
+    }
+
+    .about-us-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+    .about-us-image {
+        flex: -1;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .imagem3 {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 12px;
+    }
+
+    .up-content-buttons {
+        margin-top: 0px;
+    }
+
+    .start-our-services {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+    .blocks {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .block1,
+    .block2,
+    .block3,
+    .block4 {
+        height: 300px;
+        justify-content: center;
+        gap: 20px;
+        padding: 25px 25px;
+    }
+
+    .contact-us {
+        display: flex;
+        justify-content: center;
+    }
+
+    .contact-us-content {
+        display: flex;
+        width: 100%;
+        gap: 20px;
+        margin: 0 200px;
+    }
+
+    .start-contact-us {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+    .end-contact-us {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: none;
+        background-color: var(--light-grey);
+        border: var(--borders) solid 1px;
+        border-radius: 10px;
+        padding: 40px;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .info div {
+        display: flex;
+        align-items: center;
+    }
+
+    .info div p{
+        margin-left: 10px;
+    }
+
+    .info img{
+        width: 25px;
+    }
+
+}
+
+@media (min-width: 1400px) {
+    p { font-size: 18px; }
+    h3 { font-size: 25px; }
+    h2 { font-size: 34px; }
+    h1 { font-size: 47px; }
+    button { font-size: 18px; padding: 12px 24px; max-width: 900px; }
+    header img { max-width: 45px; }
+    .up-content-buttons { gap: 25px; }
+    .header-categories { font-size: 18px; }
+    header { padding-left: 35px; }
+
+    .our-services img {
+        width: 50px;
+    }
+}
+
+@media (min-width: 1600px) {
+    p { font-size: 19px; }
+    h3 { font-size: 28px; }
+    h2 { font-size: 40px; }
+    h1 { font-size: 58px; }
+    button { font-size: 19px; padding: 13px 26px; max-width: 1000px; }
+    header img { max-width: 50px; }
+    .up-content-buttons { gap: 30px; }
+    .header-categories { font-size: 19px; }
+    header { padding-left: 40px; }
+
+    .our-services img {
+        width: 55px;
+    }
+}
+
+@media (min-width: 1800px) {
+    p { font-size: 20px; }
+    h3 { font-size: 31px; }
+    h2 { font-size: 49px; }
+    h1 { font-size: 76px; }
+    button { font-size: 20px; padding: 14px 28px; max-width: 1100px; }
+    header img { max-width: 55px; }
+    .up-content-buttons { gap: 35px; }
+    .header-categories { font-size: 20px; }
+    header { padding-left: 45px; }
+
+    .our-services img {
+        width: 60px;
+    }
+}
+
+@media (min-width: 2000px) {
+    p { font-size: 21px; }
+    h3 { font-size: 35px; }
+    h2 { font-size: 59px; }
+    h1 { font-size: 98px; }
+    button { font-size: 21px; padding: 15px 30px; max-width: 1200px; }
+    header img { max-width: 60px; }
+    .up-content-buttons { gap: 40px; }
+    .header-categories { font-size: 21px; }
+    header { padding-left: 50px; }
+
+    .our-services img {
+        width: 65px;
+    }
+}
+
+@media (min-width: 2200px) {
+    p { font-size: 22px; }
+    h3 { font-size: 40px; }
+    h2 { font-size: 71px; }
+    h1 { font-size: 128px; }
+    button { font-size: 22px; padding: 16px 32px; max-width: 1300px; }
+    header img { max-width: 65px; }
+    .up-content-buttons { gap: 45px; }
+    .header-categories { font-size: 22px; }
+    header { padding-left: 55px; }
+
+    .our-services img {
+        width: 70px;
+    }
+}
+
+@media (min-width: 2400px) {
+    p { font-size: 23px; }
+    h3 { font-size: 45px; }
+    h2 { font-size: 86px; }
+    h1 { font-size: 168px; }
+    button { font-size: 23px; padding: 17px 34px; max-width: 1400px; }
+    header img { max-width: 70px; }
+    .up-content-buttons { gap: 50px; }
+    .header-categories { font-size: 23px; }
+    header { padding-left: 60px; }
+
+    .our-services img {
+        width: 75px;
+    }
 }
