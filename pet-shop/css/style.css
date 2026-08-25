@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+:root {
+    --company-color: #016464;
+}
+
+h1, h2, h3, a {
+    font-family: 'Plus Jakarta Sans';
+}
+
+h1 {
+    font-size: clamp(1rem, 12vw, 48px);
+    line-height: clamp(1rem, 15vw, 57.6px);
+    overflow-y: hidden;
+}
+
+h2 {
+    font-size: clamp(1rem, 12vw, 36px);
+    line-height: clamp(1rem, 15vw, 46px);
+}
+
+p {
+    font-family: 'Newsreader';
+    font-size: clamp(0.5rem, 10vw, 20px);
+    line-height: clamp(1rem, 15vw, 32px);
+    color: #3F4948;
+}
+
+.button {
+    border-radius: 1000px;
+    border: var(--company-color) solid 2px;
+}
+
+/*=== HEADER ===*/
+
+header {
+    display: flex;
+    padding: 5vw 5vw;
+    justify-content: space-between;
+    border-bottom: #c4c4c43b solid 1px;
+    align-items: center;
+    background-color: #fbf9f8;
+}
+
+.logotipo {
+    color: var(--company-color);
+    display: flex;
+    align-items: center;
+    gap: clamp(10px, 2vw, 20px);
+}
+
+.logotipo a {
+    text-decoration: none;
+    color: #016464;
+    font-weight: bold;
+    font-size: clamp(1rem, 12vw, 24px);
+}
+
+#menu {
+    width: clamp(18px, 5vw, 30px);
+}
+
+#header-categories {
+    display: none;
+    text-decoration: none;
+}
+
+#button-header {
+    display: none;
+}
+
+/*=== MAIN ===*/
+
+/*--- HERO ---*/
+
+#hero-img {
+    width: 100%;
+    min-width: 100%;
+    max-width: 592px;
+}
+
+#hero {
+    padding: 80px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: clamp(15px, 2vw, 30px);
+    background-color: #fbf9f8;
+}
+
+#hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 30px;
+    width: 100%;
+    align-items: center;
+}
+
+#consult-button {
+    width: 100%;
+    max-width: 291px;
+    height: 48px;
+    background-color: var(--company-color);
+    color: white;
+    font-size: 16px;
+}
+
+#more-button {
+    width: 100%;
+    max-width: 291px;
+    height: 48px;
+    color: var(--company-color);
+    font-size: 16px;
+}
+
+/* --- OUR SERVICES ---*/
+
+#our-services {
+    background-color: #f5f3f3;
+    padding: 80px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#our-services-top {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 48px;
+}
+
+.card-img {
+    width: clamp(1rem, 20vw, 64px);
+}
+
+.arrow {
+    width: clamp(0.8rem, 1vw, 10px);
+}
+
+#check-ups-card,
+#specialized-surgery-card,
+#well-being-card {
+    background-color: white;
+    padding: 35px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.card-bottom {
+    color: var(--company-color);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 15px;
+    font-family: 'Plus Jakarta Sans';
+}
+
+/* --- ABOUT US ---*/
+
+#about-us-img {
+    width: 100%;
+    min-width: 100%;
+    max-width: 592px;
+    border-radius: 15px;
+}
+
+#about-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 40px;
+}
+
+#about-us-top {
+    margin-top: 48px;
+    margin-bottom: 30px;
+}
+
+.topics-img {
+    width: 100%;
+    max-width: 35px;
+}
+
+#about-us-topics {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+#about-us-topics article {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+/* === FOOTER === */
+
+footer {
+    background-color: #eae8e7;
+    padding: 80px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+
