@@ -27,7 +27,7 @@
         <img src="img/menu.svg" alt="Menu hambúrguer" id="menu">
 
         <nav id="header-categories">
-            <a href="/">Services</a>
+            <span class="selected"><a href="/">Services</a></span>
             <a href="/">About Us</a>
             <a href="/">Testimonials</a>
             <a href="/">Resources</a>
@@ -38,22 +38,24 @@
 
     <main>
         <section id="hero">
-            <img src="img/hero-img.png" id="hero-img" alt="Um golden e um gato lado a lado.">
+            <img src="img/hero-img.png" alt="Um golden e um gato lado a lado." id="hero-img">
         
-            <h1>
-                Cuidado compassivo para cada membro da família
-            </h1>
+            <div id="hero-text">
+                <h1>
+                    Cuidado compassivo para cada membro da família
+                </h1>
 
-            <p>
-                Oferecemos medicina veterinária de
-                ponta com um toque acolhedor e
-                humano. O bem-estar do seu pet é a
-                nossa prioridade.
-            </p>
+                <p>
+                    Oferecemos medicina veterinária de
+                    ponta com um toque acolhedor e
+                    humano. O bem-estar do seu pet é a
+                    nossa prioridade.
+                </p>
 
-            <div id="hero-buttons">
-                <button id="consult-button" class="button">Agendar Consulta</button>
-                <button id="more-button" class="button">Saber Mais</button>
+                <div id="hero-buttons">
+                    <button id="consult-button" class="button">Agendar Consulta</button>
+                    <button id="more-button" class="button">Saber Mais</button>
+                </div>
             </div>
         </section>
 
@@ -82,7 +84,7 @@
                     </p>
 
                     <div class="card-bottom">
-                        <h4>Detalhes</h4>
+                        <a>Detalhes</a>
                         <img src="img/arrow.svg" alt="Seta" class="arrow">
                     </div>
                 </article>
@@ -99,7 +101,7 @@
                     </p>
 
                     <div class="card-bottom">
-                        <h4>Detalhes</h4>
+                        <a>Detalhes</a>
                         <img src="img/arrow.svg" alt="Seta" class="arrow">
                     </div>
                 </article>
@@ -115,7 +117,7 @@
                     </p>
 
                     <div class="card-bottom">
-                        <h4>Detalhes</h4>
+                        <a>Detalhes</a>
                         <img src="img/arrow.svg" alt="Seta" class="arrow">
                     </div>
                 </article>
@@ -125,54 +127,65 @@
         <section id="about-us">
             <img id="about-us-img" src="img/about-us-img.png" alt="Veterinária examinando Golden filhote.">
         
-            <div id="about-us-top">
-                <h2>
-                    Sobre a Nossa Clínica
-                </h2>
+            <div>
+                <div id="about-us-top">
+                    <h2>
+                        Sobre a Nossa Clínica
+                    </h2>
 
-                <p>
-                    Há mais de 10 anos cuidando dos seus
-                    melhores amigos com dedicação e
-                    tecnologia.
-                </p>
-            </div>
+                    <p>
+                        Há mais de 10 anos cuidando dos seus
+                        melhores amigos com dedicação e
+                        tecnologia.
+                    </p>
+                </div>
 
-            <div id="about-us-topics">
-                <article>
-                    <img src="img/heart.svg" alt="Coração" class="topics-img">
-                    <div id="about-us-topics-text-1">
-                        <h3>
-                            Cuidado Empático
-                        </h3>
-                        <p>
-                            Tratamos cada animal como se fosse
-                            da nossa própria família, garantindo
-                            conforto e redução de stress.
-                        </p>
-                    </div>
-                </article>
+                <div id="about-us-topics">
+                    <article id="about-us-topic-1">
+                        <img src="img/heart.svg" alt="Coração" class="topics-img">
+                        <div id="about-us-topics-text-1">
+                            <h4>
+                                Cuidado Empático
+                            </h4>
+                            <p>
+                                Tratamos cada animal como se fosse
+                                da nossa própria família, garantindo
+                                conforto e redução de stress.
+                            </p>
+                        </div>
+                    </article>
 
-                <article>
-                    <img src="img/erlenmeyer.svg" alt="Erlenmeyer" class="topics-img">
-                    <div id="about-us-topics-text-1">
-                        <h3>
-                            Tecnologia Avançada
-                        </h3>
-                        <p>
-                            Equipamentos de diagnóstico de
-                            última geração para resultados
-                            rápidos e precisos.
-                        </p>
-                    </div>
-                </article>
+                    <article id="about-us-topic-2">
+                        <img src="img/erlenmeyer.svg" alt="Erlenmeyer" class="topics-img">
+                        <div id="about-us-topics-text-1">
+                            <h4>
+                                Tecnologia Avançada
+                            </h4>
+                            <p>
+                                Equipamentos de diagnóstico de
+                                última geração para resultados
+                                rápidos e precisos.
+                            </p>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="logotipo">
-            <img src="img/logotype.svg" alt="Pata de cachorro">
-            <a idhref="/">Pawsitive Wellness</a>
+        <div class="logotipo" id="logotipo-copy-right-footer">
+            <div>
+                <img src="img/logotype.svg" alt="Pata de cachorro">
+                <a idhref="/">Pawsitive Wellness</a>
+            </div>
+
+            <div id="copy-right-footer-desktop">
+                <p>
+                    © 2024 Pawsitive Wellness Veterinary Clinic.
+                    Compassionate care for every family member.
+                </p>
+            </div>
         </div>
 
         <div id="info-footer">
@@ -186,7 +199,7 @@
                 <p>+351 210 000 000</p>
             </div>
 
-            <div id="adress-footer">
+            <div id="contact-footer">
                 <img src="img/letter.svg" alt="Letter">
                 <p>contacto@pawsitive.pt</p>
             </div>   
@@ -199,7 +212,7 @@
             <p>Contact</p>
         </div>
 
-        <div id="copy-right-footer">
+        <div id="copy-right-footer-mobile">
             <p>
                 © 2024 Pawsitive Wellness Veterinary Clinic.
                 Compassionate care for every family member.

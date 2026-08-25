@@ -9,12 +9,21 @@
     --company-color: #016464;
 }
 
-h1, h2, h3, a {
+.selected a {
+    color: var(--company-color);
+}
+
+.selected {
+    border-bottom: #016464 solid 0.15rem;
+    padding-bottom: 2px;
+}
+
+h1, h2, h3, a, h4 {
     font-family: 'Plus Jakarta Sans';
 }
 
 h1 {
-    font-size: clamp(1rem, 12vw, 48px);
+    font-size: clamp(1rem, 12.5vw, 48px);
     line-height: clamp(1rem, 15vw, 57.6px);
     overflow-y: hidden;
 }
@@ -24,10 +33,24 @@ h2 {
     line-height: clamp(1rem, 15vw, 46px);
 }
 
+h3 {
+    font-size: clamp(1rem, 8vw, 24px);
+    line-height: clamp(1rem, 15vw, 33.6px);
+}
+
+h4 {
+    font-size: clamp(1rem, 8vw, 20px);
+    line-height: clamp(1rem, 15vw, 28px);
+}
+
 p {
     font-family: 'Newsreader';
-    font-size: clamp(0.5rem, 10vw, 20px);
-    line-height: clamp(1rem, 15vw, 32px);
+    font-size: clamp(0.5rem, 4.6155vw, 20px);
+    line-height: clamp(1rem, 8vw, 32px);
+    color: #3F4948;
+}
+
+a {
     color: #3F4948;
 }
 
@@ -40,11 +63,13 @@ p {
 
 header {
     display: flex;
-    padding: 5vw 5vw;
+    padding: 20px 0;
+    padding-right: clamp(0.1rem, 5vw, 24px);
+    padding-left: clamp(0.1rem, 5vw, 24px);
     justify-content: space-between;
-    border-bottom: #c4c4c43b solid 1px;
     align-items: center;
     background-color: #fbf9f8;
+    border-bottom: #3f49481c solid 1px;
 }
 
 .logotipo {
@@ -67,7 +92,11 @@ header {
 
 #header-categories {
     display: none;
+}
+
+#header-categories a {
     text-decoration: none;
+    font-weight: 600;
 }
 
 #button-header {
@@ -80,18 +109,27 @@ header {
 
 #hero-img {
     width: 100%;
-    min-width: 100%;
     max-width: 592px;
 }
 
 #hero {
-    padding: 80px 40px;
+    padding: 80px 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     gap: clamp(15px, 2vw, 30px);
     background-color: #fbf9f8;
+}
+
+#hero p {
+    font-size: clamp(0.5rem, 5.2vw, 20px);
+}
+
+#hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 #hero-buttons {
@@ -118,13 +156,14 @@ header {
     height: 48px;
     color: var(--company-color);
     font-size: 16px;
+    background-color: #fbf9f8;
 }
 
 /* --- OUR SERVICES ---*/
 
 #our-services {
     background-color: #f5f3f3;
-    padding: 80px 40px;
+    padding: 80px 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -148,70 +187,105 @@ header {
     width: clamp(1rem, 20vw, 64px);
 }
 
-.arrow {
-    width: clamp(0.8rem, 1vw, 10px);
-}
-
 #check-ups-card,
 #specialized-surgery-card,
 #well-being-card {
     background-color: white;
-    padding: 35px;
+    padding: 30px;
     border-radius: 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
+    width: 100%;
+    width: clamp(1rem, 85vw, 390px);
+}
+
+#check-ups-card h3,
+#specialized-surgery-card h3,
+#well-being-card h3{
+    white-space: nowrap;
 }
 
 .card-bottom {
     color: var(--company-color);
     display: flex;
-    gap: 10px;
+    gap: 5px;
     align-items: center;
     margin-top: 15px;
     font-family: 'Plus Jakarta Sans';
+}
+
+.card-bottom a {
+    font-weight: 600;
+    font-size: clamp(0.8rem, 5vw, 14px);
+    color: var(--company-color);
+}
+
+.arrow {
+    width: clamp(0.8rem, 1vw, 10px);
 }
 
 /* --- ABOUT US ---*/
 
 #about-us-img {
     width: 100%;
-    min-width: 100%;
     max-width: 592px;
-    border-radius: 15px;
 }
 
 #about-us {
     display: flex;
     flex-direction: column;
+    padding: 80px 24px;
+    background-color: #fbf9f8;
     align-items: center;
-    padding: 80px 40px;
 }
 
 #about-us-top {
     margin-top: 48px;
     margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#about-us-top p {
+    font-size: clamp(0.5rem, 6vw, 20px);
 }
 
 .topics-img {
     width: 100%;
     max-width: 35px;
+    margin-bottom: 50px;
 }
 
 #about-us-topics {
     display: flex;
     flex-direction: column;
     gap: 25px;
+    align-items: center;
+    justify-content: center;
+    max-width: 675px;
 }
 
-#about-us-topics article {
+#about-us-topic-1,
+#about-us-topic-2 {
     display: flex;
     gap: 15px;
-    align-items: flex-start;
+}
+
+#about-us-topics-text-1,
+#about-us-topics-text-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 /* === FOOTER === */
+
+#copy-right-footer-desktop {
+    display: none;
+}
 
 footer {
     background-color: #eae8e7;
@@ -222,6 +296,144 @@ footer {
     text-align: center;
 }
 
+#info-footer {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+#adress-footer,
+#phone-number-footer,
+#contact-footer {
+    display: flex;
+    gap: 10px;
+}
 
+#adress-footer p,
+#phone-number-footer p,
+#contact-footer p {
+    font-size: clamp(0.5rem, 3.58974vw, 16px);
+}
 
+#terms-footer {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+#copy-right-footer-mobile {
+    margin-top: 50px;
+}
+
+#copy-right-footer-mobile p {
+    font-size: clamp(0.5rem, 3.6vw, 20px);
+}
+
+@media (max-width: 389px) {
+    #check-ups-card h3,
+    #specialized-surgery-card h3,
+    #well-being-card h3 {
+        white-space: wrap;
+    }
+}
+
+@media (min-width: 1280px) {
+
+    /*=== HEADER ===*/
+    #menu {
+        display: none;
+    }
+
+    #header-categories {
+        display: flex;
+        flex-direction: row;
+        text-decoration: none;
+        gap: 35px;
+    }
+
+    #button-header {
+        display: flex;
+        width: 100%;
+        max-width: 195px;
+        height: 40px;
+        background-color: var(--company-color);
+        color: white;
+        font-size: 16px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /*=== HERO ===*/
+
+    #hero {
+        flex-direction: row-reverse;
+        align-items: center;
+        text-align: left;
+        justify-content: center;
+    }
+
+    #hero-buttons {
+        flex-direction: row;
+    }
+
+    #more-button {
+        max-width: 151px;
+    }
+
+    /*=== OUR SERVICES ===*/
+
+    #cards-container {
+        flex-direction: row;
+    }
+
+    /*=== ABOUT US ===*/
+
+    #about-us {
+        flex-direction: row;
+        gap: 50px;
+        justify-content: center;
+    }
+
+    /*=== FOOTER ===*/
+
+    #copy-right-footer-desktop {
+        display: inline;
+    }
+
+    #copy-right-footer-mobile {
+        display: none;
+    }
+
+    footer {
+        flex-direction: row;
+        text-align: left;
+        justify-content: center;
+        gap: 80px;
+    }
+
+    #logotipo-copy-right-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 360px;
+    }
+
+    #info-footer {
+        margin-top: 50px;
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        white-space: nowrap;
+    }
+
+    #terms-footer {
+        display: flex;
+        justify-content: left;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+}
