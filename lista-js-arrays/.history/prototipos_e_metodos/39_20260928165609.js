@@ -1,0 +1,3 @@
+let configuracao = {
+    status: "ativo"
+}

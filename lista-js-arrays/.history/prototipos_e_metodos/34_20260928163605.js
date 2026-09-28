@@ -1,0 +1,3 @@
+function construtora(nome, preco) {
+    
+}
